@@ -16,13 +16,13 @@ ORDER_LABEL = "simple_quoter"
 INSTRUMENT = "BTC-PERPETUAL"  # When changing INSTRUMENT, make sure to update PRICE_TICK and SIZE_TICK based on Thalex Contract Specifications
 PRICE_TICK = 1  # Price Tick Size as defined in Thalex Contract Specifications - https://www.thalex.com/trading-information/contract-specifications/perpetuals
 SIZE_TICK = 0.001  # Volume Tick Size as defined in Thalex Contract Specifications - https://www.thalex.com/trading-information/contract-specifications/perpetuals
-HALF_SPREAD = 1.5  # BPS
+HALF_SPREAD = 0.5  # BPS
 AMEND_THRESHOLD = 5  # USD
-SIZE = 0.1  # Number of contracts to quote
+SIZE = 0.5  # Number of contracts to quote
 # If the size of our position is greater than this either side, we don't quote that side.
 # Because we don't actively cancel orders already inserted and due to race conditions in
 # notification channels, in some cases we might overshoot.
-MAX_POSITION = 0.3
+MAX_POSITION = 10
 QUOTE_ID = {Direction.BUY: 1001, Direction.SELL: 1002}
 
 
